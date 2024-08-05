@@ -222,9 +222,34 @@ export default {
     }
   },
   mounted() {
-    this.getStartPush(); // 请求数据
+    // this.getStartPush(); // 请求数据
+    this.getLocalPush(); // 本地数据
   },
   methods: {
+    // 本地数据
+    getLocalPush() {
+      // 右侧渲染的视频列表
+      const deviceInfoList = this.deviceInfoList.map((item) => {
+        return {
+          ...item,
+          disabled: false,
+          options: { ...this.$refs.videoBox.options }
+        }
+      })
+      // 右侧渲染的视频列表
+      this.deviceInfoList = deviceInfoList
+      // 右侧勾选数组
+      this.checkDeviceInfoList.push(this.deviceInfoList[0], this.deviceInfoList[1]) // 右侧列表 模拟勾选中视频
+      // 中间播放数组
+      this.checkVideoList.push({ ...this.deviceInfoList[0] }, { ...this.deviceInfoList[1] }) // 中间播放数组 添加播放视频
+      // 树形列表
+      this.treeData[0].videos = deviceInfoList // 树形结构数据 合并数据
+      deviceInfoList[0].disabled = true // 树形结构数据 添加默认禁用
+      deviceInfoList[1].disabled = true // 树形结构数据 添加默认禁用
+      this.updateCheckKeys() // 更新选中节点
+      // 更新自己选中索引
+      this.$refs.videoBox.chooseIndex = this.checkVideoList.length // 修改索引
+    },
     // 请求右侧渲染的视频列表
     getStartPush() {
       videoApi.getLiveList().then((response) => {
@@ -258,7 +283,29 @@ export default {
           // 更新自己选中索引
           this.$refs.videoBox.chooseIndex = this.checkVideoList.length // 修改索引
         }
-      });
+      }).catch(() => {
+        // 右侧渲染的视频列表
+        const deviceInfoList = this.deviceInfoList.map((item) => {
+          return {
+            ...item,
+            disabled: false,
+            options: { ...this.$refs.videoBox.options }
+          }
+        })
+        // 右侧渲染的视频列表
+        this.deviceInfoList = deviceInfoList
+        // 右侧勾选数组
+        this.checkDeviceInfoList.push(this.deviceInfoList[0], this.deviceInfoList[1]) // 右侧列表 模拟勾选中视频
+        // 中间播放数组
+        this.checkVideoList.push({ ...this.deviceInfoList[0] }, { ...this.deviceInfoList[1] }) // 中间播放数组 添加播放视频
+        // 树形列表
+        this.treeData[0].videos = deviceInfoList // 树形结构数据 合并数据
+        deviceInfoList[0].disabled = true // 树形结构数据 添加默认禁用
+        deviceInfoList[1].disabled = true // 树形结构数据 添加默认禁用
+        this.updateCheckKeys() // 更新选中节点
+        // 更新自己选中索引
+        this.$refs.videoBox.chooseIndex = this.checkVideoList.length // 修改索引
+      })
     },
     // 切换显示视频数量
     changeLayout({ nums }) {
@@ -590,6 +637,7 @@ export default {
       display: flex;
       justify-content: flex-end;
       align-items: center;
+      padding: 0 10px;
       .margin_right {
         margin-right: 10px;
         margin-top: 7px;

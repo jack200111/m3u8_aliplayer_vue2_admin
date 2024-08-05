@@ -209,9 +209,26 @@ export default {
     // }
   },
   mounted() {
-    this.getStartPush(); // 请求数据
+    // this.getStartPush(); // 请求数据
+    this.getLocalPush(); // 本地数据
   },
   methods: {
+    // 本地数据
+    getLocalPush() {
+      // 右侧渲染的视频列表
+      this.deviceInfoList = this.deviceInfoList.map((item) => {
+        return {
+          ...item,
+          options: { ...this.$refs.videoBox.options }
+        }
+      })
+      // 右侧勾选数组
+      this.checkDeviceInfoList.push(this.deviceInfoList[0], this.deviceInfoList[1]) // 右侧列表 模拟勾选中视频
+      // 中间播放数组
+      this.checkVideoList.push({ ...this.deviceInfoList[0] }, { ...this.deviceInfoList[1] }) // 中间播放数组 添加播放视频
+      // 更新自己选中索引
+      this.$refs.videoBox.chooseIndex = this.checkVideoList.length // 修改索引
+    },
     // 请求右侧渲染的视频列表
     getStartPush() {
       videoApi.getLiveList().then((response) => {
@@ -231,6 +248,8 @@ export default {
           this.$refs.videoBox.chooseIndex = this.checkVideoList.length // 修改索引
           return
         }
+      }).catch(() => {
+        this.$message.error('获取视频列表失败')
       });
     },
     // 切换显示视频数量
@@ -483,6 +502,7 @@ export default {
       display: flex;
       justify-content: flex-end;
       align-items: center;
+      padding: 0 10px;
       .margin_right {
         margin-right: 10px;
         margin-top: 7px;
