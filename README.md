@@ -4,9 +4,6 @@
 
 
 
-**node -v**
-16.18.0 
-
 基于以下二次开发
 
 vue2后台管理模板：https://github.com/PanJiaChen/vue-admin-template
@@ -50,6 +47,9 @@ vue2后台管理模板：https://github.com/PanJiaChen/vue-admin-template
 ## Build Setup
 
 ```bash
+# nvm install 16.18.0
+#nvm use 16.18.0
+
 # 克隆项目
 git clone https://gitee.com/lhj20011106/m3u8_aliplayer_vue2_admin
 
