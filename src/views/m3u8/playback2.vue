@@ -147,13 +147,6 @@ export default {
           channel: "1",
           rtmpUrl: "3333",
         },
-        {
-          userId: "1",
-          hlsUrl: "http://ivi.bupt.edu.cn/hls/cctv1.m3u8",
-          sessionID: 4,
-          channel: "1",
-          rtmpUrl: "4444",
-        },
       ],
       // 视频页面的分栏设置
       layoutNum: 1,

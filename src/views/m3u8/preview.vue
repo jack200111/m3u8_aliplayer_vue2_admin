@@ -131,31 +131,6 @@ export default {
           channel: "1",
           rtmpUrl: "3333",
         },
-        {
-          userId: "1",
-          hlsUrl: "http://ivi.bupt.edu.cn/hls/cctv1.m3u8",
-          sessionID: 4,
-          channel: "1",
-          rtmpUrl: "4444",
-        },
-        // {
-        //   hlsUrl: `http://192.168.0.221:85/live?port=1935&app=live&stream=1921683032-1`,
-        //   cameraName: '客厅梯',
-        //   userId: "2",
-        //   sessionID: 5
-        // },
-        // {
-        //   hlsUrl: `http://192.168.0.221:85/live?port=1935&app=live&stream=1921683031-1`,
-        //   cameraName: '展台',
-        //   userId: "2",
-        //   sessionID: 6
-        // },
-        // {
-        //   hlsUrl: `http://192.168.0.221:85/live?port=1935&app=live&stream=1921683044-1`,
-        //   cameraName: '办公区1',
-        //   userId: "2",
-        //   sessionID: 7
-        // },
       ],
       // 视频页面的分栏数量设置
       layoutNum: 1,
