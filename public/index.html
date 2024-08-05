@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <!-- H5模式 -->
+    <!-- //（可选）如果您的使用场景需要用到H5模式的播放器，则需引用此css文件。 -->
+  <link rel="stylesheet" href="https://g.alicdn.com/apsara-media-box/imp-web-player/2.16.3/skins/default/aliplayer-min.css" />
+    <!-- //（必须）引入js文件。 -->
+  <script charset="utf-8" type="text/javascript" src="https://g.alicdn.com/apsara-media-box/imp-web-player/2.16.3/aliplayer-min.js"></script>
+    <!-- 引入自适应模式的js文件 -->
+    <!-- <link rel="stylesheet" href="https://g.alicdn.com/de/prismplayer/2.8.2/skins/default/aliplayer-min.css" /> -->
+    <!-- <script charset="utf-8" type="text/javascript" src="https://g.alicdn.com/de/prismplayer/2.8.2/aliplayer-min.js"></script> -->
+  <title>
+    <%= webpackConfig.name %>
+  </title>
+</head>
+
+<body>
+  <noscript>
+    <strong>We're sorry but <%= webpackConfig.name %> doesn't work properly without JavaScript enabled. Please enable it
+        to continue.</strong>
+  </noscript>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+  <script>
+    // 先检查 window.SITE_CONFIG 是否已经定义，如果未定义，则赋一个空对象
+    window.SITE_CONFIG = window.SITE_CONFIG || {};
+    window.SITE_CONFIG['userMenu'] = []; // 左侧菜单列表（后台返回，未做处理）
+
+    // /user/login
+    const loginData = {
+      "code": 0,
+      "msg": "登录成功",
+      "data": {
+        "id": 1,
+        "account": "admin",
+        "code": "U1",
+        "name": "超级管理员",
+        "mobile": null
+      }
+    }
+    // /menu/menuTreeAll
+    const routerData = {
+      "code": 0,
+      "msg": "成功",
+      "data": [
+        {
+          "id": 1,
+          "pid": 0,
+          "status": 1,
+          "type": 0,
+          "code": "B01",
+          "name": "视频中心",
+          "identification": null,
+          "url": "member",
+          "icon": "video",
+          "memo": "member",
+          "sort": 1,
+          "creator_id": 1,
+          "updater_id": 1,
+          "created_at": "2023-11-24 15:44:08",
+          "updated_at": "2023-11-24 15:44:08",
+          "component": "Layout",
+          "children": [
+            {
+              "id": 2,
+              "pid": 1,
+              "status": 1,
+              "type": 1,
+              "code": "A0101",
+              "name": "视频预览",
+              "identification": null,
+              "url": "/m3u8/preview",
+              "icon": "menu",
+              "memo": null,
+              "sort": 1,
+              "creator_id": 1,
+              "updater_id": 1,
+              "created_at": "2023-11-24 16:06:05",
+              "updated_at": "2023-11-24 16:06:10",
+              "component": null,
+              "children": []
+            },
+            {
+              "id": 3,
+              "pid": 1,
+              "status": 1,
+              "type": 1,
+              "code": "A0101",
+              "name": "视频预览2",
+              "identification": null,
+              "url": "/m3u8/preview2",
+              "icon": "menu",
+              "memo": null,
+              "sort": 1,
+              "creator_id": 1,
+              "updater_id": 1,
+              "created_at": "2023-11-24 16:06:05",
+              "updated_at": "2023-11-24 16:06:10",
+              "component": null,
+              "children": []
+            },
+            {
+              "id": 4,
+              "pid": 1,
+              "status": 1,
+              "type": 1,
+              "code": "B010101",
+              "name": "视频回放",
+              "identification": null,
+              "url": "/m3u8/playback",
+              "icon": "menu",
+              "memo": null,
+              "sort": 1,
+              "creator_id": 1,
+              "updater_id": 1,
+              "created_at": "2023-11-24 15:44:08",
+              "updated_at": "2023-11-24 15:44:08",
+              "component": null,
+              "children": []
+            },
+            {
+              "id": 11,
+              "pid": 1,
+              "status": 1,
+              "type": 1,
+              "code": "B010101",
+              "name": "视频回放2",
+              "identification": null,
+              "url": "/m3u8/playback2",
+              "icon": "menu",
+              "memo": null,
+              "sort": 1,
+              "creator_id": 1,
+              "updater_id": 1,
+              "created_at": "2023-11-24 15:44:08",
+              "updated_at": "2023-11-24 15:44:08",
+              "component": null,
+              "children": []
+            },
+            {
+              "id": 5,
+              "pid": 1,
+              "status": 1,
+              "type": 1,
+              "code": "B010101",
+              "name": "视频设备列表",
+              "identification": null,
+              "url": "/video_page/devices",
+              "icon": "menu",
+              "memo": null,
+              "sort": 1,
+              "creator_id": 1,
+              "updater_id": 1,
+              "created_at": "2023-11-24 15:44:08",
+              "updated_at": "2023-11-24 15:44:08",
+              "component": null,
+              "children": []
+            },
+            {
+              "id": 6,
+              "pid": 1,
+              "status": 1,
+              "type": 1,
+              "code": "B010101",
+              "name": "获取在线设备列表",
+              "identification": null,
+              "url": "/video_page/userList",
+              "icon": "menu",
+              "memo": null,
+              "sort": 1,
+              "creator_id": 1,
+              "updater_id": 1,
+              "created_at": "2023-11-24 15:44:08",
+              "updated_at": "2023-11-24 15:44:08",
+              "component": null,
+              "children": []
+            },
+            {
+              "id": 7,
+              "pid": 1,
+              "status": 1,
+              "type": 1,
+              "code": "B010101",
+              "name": "获取视频流",
+              "identification": null,
+              "url": "/video_page/startPush",
+              "icon": "menu",
+              "memo": null,
+              "sort": 1,
+              "creator_id": 1,
+              "updater_id": 1,
+              "created_at": "2023-11-24 15:44:08",
+              "updated_at": "2023-11-24 15:44:08",
+              "component": null,
+              "children": []
+            },
+            {
+              "id": 8,
+              "pid": 1,
+              "status": 1,
+              "type": 1,
+              "code": "B010101",
+              "name": "获取设备信息",
+              "identification": null,
+              "url": "/video_page/device_info",
+              "icon": "menu",
+              "memo": null,
+              "sort": 1,
+              "creator_id": 1,
+              "updater_id": 1,
+              "created_at": "2023-11-24 15:44:08",
+              "updated_at": "2023-11-24 15:44:08",
+              "component": null,
+              "children": []
+            },
+            {
+              "id": 9,
+              "pid": 1,
+              "status": 1,
+              "type": 1,
+              "code": "B010101",
+              "name": "获取设备基本信息",
+              "identification": null,
+              "url": "/video_page/deviceCfg",
+              "icon": "menu",
+              "memo": null,
+              "sort": 1,
+              "creator_id": 1,
+              "updater_id": 1,
+              "created_at": "2023-11-24 15:44:08",
+              "updated_at": "2023-11-24 15:44:08",
+              "component": null,
+              "children": []
+            },
+            {
+              "id": 10,
+              "pid": 1,
+              "status": 1,
+              "type": 1,
+              "code": "B010101",
+              "name": "获取通道信息",
+              "identification": null,
+              "url": "/video_page/getPicCfg",
+              "icon": "menu",
+              "memo": null,
+              "sort": 1,
+              "creator_id": 1,
+              "updater_id": 1,
+              "created_at": "2023-11-24 15:44:08",
+              "updated_at": "2023-11-24 15:44:08",
+              "component": null,
+              "children": []
+            },
+          ]
+        },
+      ],
+    }
+    // /menu/getUserMenuIds
+    const idsData = {
+      data: [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        // 12,
+        // 13,
+        // 14,
+        // 15,
+        // 16,
+        // 17,
+        // 18,
+        // 19,
+        // 20
+      ]
+    }
+    //
+    window.loginData = loginData
+    window.routerData = routerData
+    window.idsData = idsData
+
+    // {
+    //   "id": 1,
+    //   "pid": 0,
+    //   "status": 1,
+    //   "type": 0,
+    //   "code": "A01",
+    //   "name": "基础管理",
+    //   "identification": null,
+    //   "url": "sys",
+    //   "icon": "base",
+    //   "memo": "sys",
+    //   "sort": 2,
+    //   "creator_id": 1,
+    //   "updater_id": 1,
+    //   "created_at": "2023-11-24 15:44:08",
+    //   "updated_at": "2023-11-24 15:44:08",
+    //   "component": "Layout",
+    //   "children": [
+    //     {
+    //       "id": 2,
+    //       "pid": 1,
+    //       "status": 1,
+    //       "type": 1,
+    //       "code": "A0102",
+    //       "name": "用户管理",
+    //       "identification": null,
+    //       "url": "/sys/user",
+    //       "icon": "roleManage",
+    //       "memo": null,
+    //       "sort": 2,
+    //       "creator_id": 1,
+    //       "updater_id": 1,
+    //       "created_at": "2023-11-24 15:44:08",
+    //       "updated_at": "2023-11-24 15:44:08",
+    //       "component": null,
+    //       "children": []
+    //     },
+    //     {
+    //       "id": 6,
+    //       "pid": 1,
+    //       "status": 1,
+    //       "type": 1,
+    //       "code": "A0101",
+    //       "name": "菜单管理",
+    //       "identification": null,
+    //       "url": "/sys/menu",
+    //       "icon": "menu",
+    //       "memo": null,
+    //       "sort": 1,
+    //       "creator_id": 1,
+    //       "updater_id": 1,
+    //       "created_at": "2023-11-24 16:06:05",
+    //       "updated_at": "2023-11-24 16:06:10",
+    //       "component": null,
+    //       "children": []
+    //     }
+    //   ]
+    // },
+    // {
+    //   "id": 3,
+    //   "pid": 0,
+    //   "status": 1,
+    //   "type": 0,
+    //   "code": "B01",
+    //   "name": "会员管理",
+    //   "identification": null,
+    //   "url": "member",
+    //   "icon": "userManage",
+    //   "memo": "member",
+    //   "sort": 1,
+    //   "creator_id": 1,
+    //   "updater_id": 1,
+    //   "created_at": "2023-11-24 15:44:08",
+    //   "updated_at": "2023-11-24 15:44:08",
+    //   "component": "Layout",
+    //   "children": [
+    //     {
+    //       "id": 4,
+    //       "pid": 3,
+    //       "status": 1,
+    //       "type": 1,
+    //       "code": "B0101",
+    //       "name": "会员列表",
+    //       "identification": null,
+    //       "url": "/member-car/member-list",
+    //       "icon": "userManage",
+    //       "memo": null,
+    //       "sort": 2,
+    //       "creator_id": 1,
+    //       "updater_id": 1,
+    //       "created_at": "2023-11-24 15:44:08",
+    //       "updated_at": "2023-11-24 15:44:08",
+    //       "component": null,
+    //       "children": []
+    //     },
+    //     {
+    //       "id": 5,
+    //       "pid": 3,
+    //       "status": 1,
+    //       "type": 1,
+    //       "code": "B010101",
+    //       "name": "车辆进出记录",
+    //       "identification": null,
+    //       "url": "/member-car/inout-record",
+    //       "icon": "car",
+    //       "memo": null,
+    //       "sort": 1,
+    //       "creator_id": 1,
+    //       "updater_id": 1,
+    //       "created_at": "2023-11-24 15:44:08",
+    //       "updated_at": "2023-11-24 15:44:08",
+    //       "component": null,
+    //       "children": []
+    //     }
+    //   ]
+    // },
+  </script>
+</body>
+
+</html>

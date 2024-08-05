@@ -1,0 +1,110 @@
+@font-face {
+  font-family: "iconfont";
+  src: url("./font/iconfont.eot?t=1609741378507"); /* IE9 */
+  src: url("./font/iconfont.eot?t=1609741378507#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */
+      url("data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAykAAsAAAAAFcwAAAxWAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCEXAqcIJYiATYCJANACyIABCAFhG0HgSUb4RGjooZyVhxkf3FgN/7YEChK1NirFvv4W+aepFZaldU35f7ilZyVEUbEDsh/GnPv3/0zmTZEpGvVRCLTaOQtYcli8ZRnp0u9z5ioKiAWz4ZBXQtN/OvsOJ6y7zNYJ62KWBEqgK34QsDdqxZgSJG1RWnkAcaUJNAQztmlAiOp4lK0uJQW0wgwRTdmMFFems2Tf69iY4K1TMzx2r/D5vxejRZAwNRaq7/DqIQo3j4karu9173bY37xd0fEE0kTIRPSHab3iGhpkAiVRCWUSAgZCKFNudQMtwA1/W0cDATwpg0k7eTqFjqYyRDNphQZdDLluCGd2FJdsWW+T94pNr7GUQDegs+nh9kOIKgE81DX47iEvYufc+bDf3CbnjweTwtgLgRIwCYAz7ldqfkES9vMOv9d2B1AZgn6usHe4HDQm5uZnFutDJDtbYZJNmt1BESake7snzxBYkrgOVkBKhA2Ev0fKDCAQ1dWDAgCvcUCAgOWECQwQ2DBCgZ9sIYB2MAAbGEAdjAA70EQwIcQeHCPYnAwmSHIAT5Hh8Jkq7fFLMAF4AWgDriHQM/U1+X3NPtVaDVGthNZRZg5UEyLy+P6MuSbeSyHFsThsMzTw/ZFUHh8KLQjtLODOAjimDk8iOfYEThBfBiBBTapjoh3shdAPJ5DM9De1bXNZAK8wxbCbMbNFiOONlmA0diCFzWZMLrwHpDZXHNu2v+AIenulFffpLRDdS4Qxk+ZUZ7ZGI3CA2eGut00w8HIFV9GzxRt8IGECH4N81Am0q937+rdTpy25HPvmsSYUjN0xPnJsoFjtYozonPTpIGe8tJ2N3IGdKQ+mEv3a+WaI/Xl/B30sBtLPgRzQOofpiKQp0KQehF3NqlHtgkIt4jSADod5lEAyaR00G0gne7Hps2UcdJT44p4+h6vnikTbTFEHfCBl6FcvMFiIe4TbmJ6Uf2tw4ehagd81oM1Q5TOHe4Zoyd88C79CesivePUqCfWnXLq8vFlcFxY2kfL4DNX9WrlCkoF9af8myXVCGIyre3SiXDVEY1G2++E9evrMGX/4GBXpzOuGjhyRKOtp/UeENk5kIpcAzwMY8rzLoS6V3fGEVW4Kes7dYGoQsGr7XchBvXuHX1Go9msE8A5aDRSAQPf5u0ctuTz75r8wPmE+rM3AUNulMJKQq13ZpKdzg0qWDHkxECOv1wi3u4IcNmkTsQ7MuTKKv6kWtpATpsn5VN82mCepiaNU0gbZUxXUM4DBzwsBG5EFXInJe1iIVpi7Tbzk9KIMAtmmsWUSlrtoiadV8OYyVRZV3eQFJnNi84MB7+CiLp6decIfLOKGpI7bVLSetI5c8vDlj/fuyAtBssGFTXS7WbagSo02uGgQReLZad5K2khukgdFWjc9ZSAvqHZ3DFAXZG3IvLh8y+yc62KcjQa5SbsiN5pM2mp3h1kQ/Ow/AoVtrlKd/g6HYpt656M/5o2bpggsDPGkCP3DM6xAy36NOxCcuTt6O8ZuXOlgjAVj1sQerZmvAi/Mrqi3trradiD9BaNlvL7hwHrw9qjO1utxxhypRNXrXZhqlQwh1Lg0Atup9aTOhimhl5eW1rfhtBKAJRRBQRV1ZIPLwZyBUBRgSBoqaHVn4cWglRC96EnFlK3lM9tA4bOnHjHKL1nRo8YI5ikvvZemOoYedxFn382RXlUPuJ4YQOPugJY8qtB/MHr3/nXr8EdZyY9WT1TCecNPuze6YZM3Y72UXPmNe9vRJCg7watGzOlK1YNXvxt6l4Q4bBKBx1dEEHWqGmnDKXcEcVc+u0THKVApop0IXCUVTcK6xFNgTaXySQ36rwGC2muWgHUcdUEHqpuSOXSdZo8FaZSu3wQmOtWhiZUsqvQPNfdMT0z4A0QOX1vv92Xc9KmfCpeqwb6sG+G+0c9Y+dORgOj3rvhekYU6i/J8UejGI07djQ2/mQV+Fh/hqx8YAWI2f9/WJuTsXB2zYp8CXCUAFGvSR0qI2ft2HMW64fsxSXJ8bCW2A/Hxwe3mVyyOPsHFut5bt9S74WMqrSK3aAkkevdLK4L0k6mh2SEfPxvbOMPa7L7tIR1aJj14ou0uIqRsJGKON5bLz1fvZVW+MPi7BM15zWDo9Nyh/0Mg73OfmYr11cr0vhu9dWItL6CrU9991V5suy979SJTMXTCRkYWoeZbVwHQ7vfcavXTusg3PbMftgB0dGzzUHiK+zOMl+81Ff3+5UMEVsUMPm7LiUeL/PtZE86BLE7o/ZyI3dVjcCSpdUSkAukDiwJirz8RzMi9Px/XI7cEWgjq6+TgTwgVOQMcpj6vXofv085BG2uehH6oip4fXF+cYMm8BAvajjxervrkfs4kbvAV25+zWrf5u+q1pRr3t3ezlAoGW0yJ5m7D4WyjWHkw6MOozAkW7w4D2KuxTBroS1b7Fz8Ihw6XE/is7JNvFPh+va3XGPLG1rz13tvCtpW1rC1wDhZ4mKx/R7GuxxF8bLiw5x37bd9Vvql35XqpUf9VIJRf+1rDpHSfr/TwrftT4j3JD7BT3IiRrEQ5GfHQjGVRORSdlVSMJ6TkRtWgyc1EUnw5lYImoXdkEQiEAncG4KKwjzyNoppkVdMpgSytWMTs0F8L+7pM7KN2ewZEe+S9+6SkDrbuzv2p3KxCNltEmJABDCwKa9UVIR9yP6qzZVgX+X+uyFaUNmCtoD41kJBjzV2oX/O44DLXqmGwgTC2XgbD5DkTARNfCnqKMiqEbm5ovG5hdlalwMe5xfVbl7uRBq5o5Q+D30I9oeWFDe5L4f6gXj7lvXJfzv+nTwner2X79/cgtpoZI+uBFwJjwgnKj4ntvi0Syus/cTbMm7pxG/6MDQ19XvRqOibS5f81p3gclo5tKIVctVlM0ga1Nq6psgjVyr1cIizhv9k99PI2c9t3stLxz8CFfMNja3zbsaaRX705hpLdfVP4dZw3qglyqjdef6+dPV2Xf7kNZaUqdv8cBD+U+tav9a2HyN+FFv3vW8xfTQvns+R5OmuQvkaq9jyzAck7vxY/qCAebEVnNOeXvEJ2nhpd289y3V/Qi5W59IYYbe876Pl6HJs+eKnqyXOTY07C73/jnR8UR7R9YqNYyvSoxxfluX9FJLVZrHJaCn9oWxHoKSlFRfWKh0WNpMrXmt6FtkczSlKKl/ywOa3JeRcbc3KPyJZf5SDz0ZLgVRQKpQKSwVSUMqXxtQ8X6Btf96utX1uq12QRHDKm7LT2VE/xfnECa4KtwivCqLy6aMlJfmTcnRadX+gZ/bOTK7A7x4RRVJtXXM2OzKKmX8VFp29Lci9GCD4wRrCEesP9URZuE4ZiDc+Wp8uH83MmxnNdGmtD4hkZrW32F6zbWmfzn0J0s1pcSD5Y/f07Q27FnyB8v5yWVyUB7zalixOLUVaL2vAjW8QCWsvU4Lc0Shn/Hl5fH/+p5vdpDzpmIMaTWWsbsIk5aIVcTKuGnVcTU3gamfJ3TheHET7acRmPFnZuX2nbMqHSas5KV/qH//2e4L8o4VXt6A8mVMAHrlIUiyrWYcj+3lDzi57GUcK2qzAzG8l5UUmaTX0VXewDm9jyq3zVjkLmDsAyErmIGlylQSb4nuK7lPOXZOaPgMgrV7LG0wXAKyeOtuCouuQjzUNAGBeYXwXgOvykd5S4OO5/Pql/PTfFyD/CF1fuZokAs+LOq4DIhtz0aYBAmAUR9idDZL/VTvlpELA2iDQ6LHyVgAcGLTlWudZcwDYiaBtWe8AACwgCl0fZEfLEoCdrfB6AX/OJwCjOnPT9zm5jlo+XuU6SY5gTCFZFb2ImOjNHCU4RJrooxxvw+n2QUtQR9kBWPdKDqk+coTsC0miPxET/ZWjdP2rNcnrOd5N2BUZLJe9w4AZYcnyLZOFs9yuol7Y/BpFpbMgyulK9xiidJZNR5ND6BQthmOsE1diRsQZD86wE2MN1NoxH9wSCxotCPr5eMyX644KZ6DnTIAy5BUsMbmttFRwLD476RU+/hoSKlomNPS7lb6HgkjOn5kamSjAKWtV/V5L22hFmCHRcszpGjgGcyJapC2/w/jqxZZQgYwseni9ubGMx7Xs6Pyc+eQ5fIgDmLdU10gSkyJNhiw58hQoUqJMheodrZ6Z97Beq8SVLLAVt5HQtN9RHQpO97N3ubkZaikWVC+y0FhLLpsld9i1bhilsJlu8ErrupdFI5LzDa+zbcNUhM3oKlsCAAA=")
+      format("woff2"),
+    url("./font/iconfont.woff?t=1609741378507") format("woff"),
+    url("./font/iconfont.ttf?t=1609741378507") format("truetype"),
+    /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */ url("/font/iconfont.svg?t=1609741378507#iconfont")
+      format("svg"); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-camera:before {
+  content: "\e605";
+  font-size: 18px;
+  color: rgba(2, 215, 253, 0.658);
+}
+
+.icon-device:before {
+  content: "\e606";
+  font-size: 18px;
+  color: rgba(2, 215, 253, 0.658);
+}
+
+.icon-system:before {
+  content: "\e607";
+  font-size: 18px;
+  color: rgba(2, 215, 253, 0.658);
+}
+
+.icon-control:before {
+  content: "\e608";
+  font-size: 18px;
+  color: rgba(2, 215, 253, 0.658);
+}
+
+.icon-alarm-light:before {
+  content: "\e609";
+  font-size: 26px;
+  color: rgba(2, 215, 253, 0.658);
+}
+
+.icon-car:before {
+  content: "\e601";
+  color: white;
+  font-size: 20px;
+}
+
+.icon-wifi:before {
+  content: "\e602";
+  color: white;
+  font-size: 20px;
+}
+
+.icon-alarm-light2:before {
+  content: "\e604";
+  color: white;
+  font-size: 20px;
+}
+
+.icon-no-signal:before {
+  content: "\e67e";
+  font-size: 40px;
+  color: white;
+}
+
+.icon-full:before {
+  content: "\e634";
+  font-size: 16px;
+  color: white;
+}
+
+.icon-pic:before {
+  content: "\e631";
+  font-size: 16px;
+  color: white;
+}
+
+.icon-stop:before {
+  content: "\e600";
+  font-size: 16px;
+  color: #F56C6C;
+}
+
+.icon-play:before {
+  content: "\e603";
+  font-size: 16px;
+  color: white;
+}
+
+.icon-mute:before {
+  content: "\ea1f";
+  font-size: 16px;
+  color: white;
+}
+
+.icon-sound:before {
+  content: "\ea4c";
+  font-size: 16px;
+  color: white;
+}

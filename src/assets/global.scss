@@ -1,0 +1,163 @@
+/* 通用样式 */
+html,
+body,
+div,
+nav,
+ul,
+li,
+span,
+a,
+p,
+input,
+canvas {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	// font-style: normal;
+	border: 0;
+	box-sizing: border-box;
+	line-height: 1;
+	// font-size: .17rem;
+  // font-family: 'Source Han Sans CN'
+}
+a {
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+}
+.cursor {
+	cursor: pointer;
+}
+/* 浮动效果 */
+.clearfix:after {
+  content: '';
+  display: block;
+	clear: both;
+  *zoom: 1;
+}
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+
+/* 弹性布局:flex */
+.flex {
+	display: flex;
+	display: -webkit-flex;
+}
+.flex_row {
+	flex-direction: row;
+}
+.flex_col {
+	flex-direction: column;
+}
+.flex_ju_c {
+	justify-content: center;
+}
+.flex_ju_sb {
+	justify-content: space-between;
+}
+.flex_ju_sa {
+	justify-content: space-around;
+}
+.flex_ju_end {
+	justify-content: flex-end;
+}
+.flex_a_c {
+	align-items: center;
+}
+.flex_a_start {
+	align-items: flex-start;
+}
+.flex_a_end {
+	align-items: flex-end;
+}
+.flex_wrap {
+	flex-wrap: wrap;
+}
+.flex_nowrap {
+	flex-wrap: nowrap;
+}
+
+/* 文字超出省略 */
+.ellipsis {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.ellipsis_two {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	line-clamp: 2;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+.ellipsis_three {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	line-clamp: 3;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+}
+
+/* 居中 */
+.t_c {
+	text-align: center;
+}
+
+/* 颜色 */
+.c_white {
+	color: #fff;
+}
+.c_black {
+	color: black;
+}
+.c_d3 {
+	color: #d3d3d3;
+}
+.c_six {
+	color: #666666;
+}
+.c_45 {
+	color: #454545;
+}
+
+
+.bold {
+	font-weight: bold;
+}
+.pointer {
+  cursor: pointer;
+}
+::-webkit-scrollbar {
+	width: 0px;
+	height: 0px;
+	background-color: #0b797b;
+}
+::-webkit-scrollbar-track {
+	border-radius: 10px;
+	background-color: #0b797b;
+}
+::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background-color: #0b797b;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Chrome/Safari/Opera */
+  -khtml-user-select: none; /* Konqueror */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently not 										supported by any browser */
+}
+.rotate180 {
+  transform: rotateX(180deg);
+}
+.el-select-dropdown__wrap {
+  max-height: 284px !important;
+}
